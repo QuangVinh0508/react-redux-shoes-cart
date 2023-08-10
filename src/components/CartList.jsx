@@ -5,8 +5,8 @@ import CartItem from "./CartItem";
 
 function CartList() {
   const carts = useSelector(state => state.app.carts);
+  const cost = useSelector(state => state.app.cost);
 
-  console.log('cart list: ',carts)
   return (
     <div className="card">
       <div className="cardTop">
@@ -21,7 +21,7 @@ function CartList() {
 
       <div className="cardTitle">
         <span>Your cart</span>
-        <span className="card_amount">$89.97</span>
+        <span className="card_amount">${cost.toFixed(2)}</span>
       </div>
 
       <div className="cardBody">

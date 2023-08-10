@@ -7,7 +7,7 @@ export const dataProducts = [
     description:
       "The iconic Nike Air Zoom Pegasus 36 offers more cooling and mesh that targets breathability across high-heat areas. A slimmer heel collar and tongue reduce bulk, while exposed cables give you a snug fit at higher speeds.",
     price: 108.97,
-    color: "#e1e7ed"
+    color: "#e1e7ed",
   },
   {
     id: 2,
