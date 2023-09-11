@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux";
 
 // actions
 import { removeCart, incrementCost, decrementCost } from "../redux/app.actions"
@@ -53,4 +53,4 @@ function CartItem({ cart }) {
   )
 }
 
-export default CartItem
+export default CartItem;

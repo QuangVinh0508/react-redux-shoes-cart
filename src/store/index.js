@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { combineReducers, createStore, compose } from 'redux';
+import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 // reducer
 import { appReducer } from '../redux/app.reducer';
@@ -11,4 +12,6 @@ const rootReducer = combineReducers({
   app: appReducer
 })
 
-export const store = createStore(rootReducer, composeEnhancers());
+export const store = createStore(rootReducer, composeEnhancers(
+  applyMiddleware(thunk)
+));

@@ -10,10 +10,24 @@ export const addCart = (payload) => ({
   payload
 })
 
-export const removeCart = (itemId) => ({
-  type: REMOVE_CART,
-  payload: itemId
-})
+// export const removeCart = (itemId) => ({
+//   type: REMOVE_CART,
+//   payload: itemId
+// })
+
+export const removeCart = (itemId) => (dispatch, getState) => {
+  const isExsites = getState().app.carts.some(cart => cart.id === cart.id);
+  if(isExsites) {
+    console.log('exsited')
+    dispatch({
+      type: REMOVE_CART,
+      payload: itemId
+    })
+    return;
+  }
+  console.log('no existed')
+ 
+}
 
 export const incrementCost = (itemId) => ({
   type: INCREMENT_COST,
